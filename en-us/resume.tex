@@ -4,6 +4,7 @@
 
 \usepackage{fontawesome5}
 \usepackage{academicons}
+\usepackage{graphicx}
 \usepackage{url}
 \usepackage{makecell}
 \usepackage{parskip}
@@ -63,30 +64,29 @@
 \hfill
 \begin{minipage}[t]{0.55\linewidth}
   \raggedleft\sffamily
-  Email: \href{mailto:ryan\_shanghaitech@proton.me}{\textcolor{ieeeblue1}{ryan\_shanghaitech@proton.me}}\\
+  Email: \href{mailto:rui.1002@proton.me}{\textcolor{ieeeblue1}{rui.1002@proton.me}}\\
   ShanghaiTech University, Shanghai, China\\
-  \href{https://scholar.google.com/citations?user=llTqHTUAAAAJ&hl=en}{\textcolor{ieeeblue1}{\icon{resource/scholar.png} Google Scholar}}
-  $|\;$\href{https://github.com/RyanShanghaitech}{\textcolor{ieeeblue1}{\icon{resource/github.png} GitHub}}
+  \href{https://scholar.google.com/citations?user=llTqHTUAAAAJ&hl=en}{\textcolor{ieeeblue1}{\icon{../resource/scholar.png} Google Scholar}}
+  $\;|\;$\href{https://pypi.org/user/ryan_shanghaitech/}{\textcolor{ieeeblue1}{\icon{../resource/pypi.png} PyPI}}$\;|\;$\href{https://github.com/RyanShanghaitech}{\textcolor{ieeeblue1}{\icon{../resource/github.png} GitHub}}
 \end{minipage}
 \vspace{1\baselineskip}
 \\
-\sanf{ieeeblue0}{\textbf{Summary:}} M.S. candidate from School of Biomedical Engineering, ShanghaiTech University. Experienced in non-Cartesian gradient design and reconstruction. Interested in efficient sequence design and general-purpose reconstruction. Completed two first-author algorithmic research projects with \sanf{ieeeblue0}{orders-of-magnitude} improvements.
+\sanf{ieeeblue0}{\textbf{Summary:}} M.S. candidate at the School of Biomedical Engineering, ShanghaiTech University. Experienced in non-Cartesian pulse sequence design and reconstruction, with publications in IEEE TBME / ISMRM / SCMR / AAAI / JMRI, and open-source projects on PyPI / GitHub, invited as reviewer by IEEE TMI / ISMRM.
 
-{\sanf{ieeeblue0}{\textbf{Skills:}}} Pulse Sequence Design, Reconstruction, Python (with C-API, CUDA acceleration), MATLAB (with MEX interface), C/C++, CUDA, Linux, Circuit Design, Embedded Programming, Desktop Development (Qt)
+{\sanf{ieeeblue0}{\textbf{Skills:}}} Pulse Sequence Design, Reconstruction, Artifacts Correction, Simulation, Python (with C-API, CUDA acceleration), MATLAB (with MEX interface), C/C++, CUDA, Linux, Circuit Design, Embedded Programming, Desktop Development (Qt)
 
 \section{Education}
 \begin{tabularx}{\linewidth}{@{}l X@{}}	
 2023 - 2026 & \sanf{ieeeblue0}{M.S. (Biomedical Engineering) at ShanghaiTech University} \hfill \normalsize \makecell[r]{(major GPA: 3.92/4.00)\\(overall GPA: 3.79/4.00)} \\
-& \sanf{ieeeblue0}{Supervisor:} Haikun Qi, Ph.D., \href{mailto:qihk@shanghaitech.edu.cn}{\sffamily\textcolor{ieeeblue1}{qihk@shanghaitech.edu.cn}} \\
 & \sanf{ieeeblue0}{Major Courses:} Algorithms \textbf{(A+)}, Principles of MRI \textbf{(A)}, Medical Image Processing \textbf{(A)}, \\
 & MRI System Design \textbf{(A)}, Semiconductor Detectors and Readout Electronics \textbf{(A)} \\
 \\
 2018 - 2022 & \sanf{ieeeblue0}{B.S. (Automation) at Shandong University} \hfill \normalsize (overall GPA: 81.31/100) \\
-& \sanf{ieeeblue0}{Awards:} $1\times$ National \textbf{1st} Prize, $1\times$ National \textbf{2nd} Prize, $1\times$ Provincial \textbf{1st} Prize. \sanf{ieeeblue0}{For reference, one national 3rd prize in such competition qualifies a student for recommendation to graduate schools.}
+& \sanf{ieeeblue0}{Awards:} $1\times$ National \textbf{1st} Prize, $1\times$ National \textbf{2nd} Prize, $1\times$ Provincial \textbf{1st} Prize.
 \end{tabularx}
 
 \section{Publications}
-\subsection{[1] 2026, Real-Time Gradient Waveform Design for Arbitrary k-Space Trajectories}\;\badge{ieeeblue1}{Pulse Sequence} \badge{ieeeblue1}{Real-Time}
+\subsection{[1] 2026, Real-Time Gradient Waveform Design for Arbitrary k-Space Trajectories}\;\badge{ieeeblue1}{Pulse Sequence}
 \begin{itemize}
     \item \sanf{ieeeblue0}{Target:} Develop a general algorithm for calculating non-Cartesian gradient waveforms.
     \item \sanf{ieeeblue0}{Significance:} Improve the efficiency by \sanf{ieeeblue0}{1 order of magnitude}, achieving real-time gradient design. Improve the slew-rate accuracy by \sanf{ieeeblue0}{2 orders of magnitude}.
@@ -94,7 +94,7 @@
     \item \sanf{ieeeblue0}{Status:} Published at \url{https://doi.org/10.1109/TBME.2026.3654117} on \textit{IEEE Trans. Biomed. Eng.}
 \end{itemize}
 \vspace{\baselineskip}
-\subsection{[2] 2026, Sampling Density Compensation using Fast Fourier Deconvolution}\;\badge{ieeeblue1}{Signal Processing} \badge{ieeeblue1}{Reconstruction}
+\subsection{[2] 2026, Sampling Density Compensation using Fast Fourier Deconvolution}\;\badge{ieeeblue1}{Reconstruction}
 \begin{itemize}
     \item \sanf{ieeeblue0}{Target:} Develop a general algorithm for calculating density compensation functions.
     \item \sanf{ieeeblue0}{Significance:} Improve the efficiency by \sanf{ieeeblue0}{1-2 orders of magnitude}, saving tens of minutes.
@@ -102,30 +102,30 @@
     \item \sanf{ieeeblue0}{Status:} Accepted by \textit{ISMRM}-2026, preprint available at \url{https://doi.org/10.48550/arXiv.2510.14873}.
 \end{itemize}
 \vspace{\baselineskip}
-\subsection{[3] 2026, Zero-shot INMR for Ultra-high Temporal Resolution Dynamic MRI}\;\badge{ieeeblue1}{Pulse Sequence}
+\subsection{[3] 2026, Zero-shot INMR for Ultra-high Temporal Resolution Dynamic MRI}
 \begin{itemize}
     \item \sanf{ieeeblue0}{Role:} \textbf{Coauthor}. Contributed my trajectory library from \textit{Real-Time Gradient Waveform Design for Arbitrary k-Space Trajectories}.
     \item \sanf{ieeeblue0}{Status:} Published at \url{https://doi.org/10.1609/aaai.v40i5.37395} on \textit{AAAI}-2026.
 \end{itemize}
 \vspace{\baselineskip}
-\subsection{[4] 2026, Detection of Coronary Microvascular Dysfunction in Diabetic Mice Using Arterial Spin Labeling Cardiac MRI: A Multimodality Imaging Comparison}\;\badge{ieeeblue1}{Pulse Sequence}
+\subsection{[4] 2026, Detection of Coronary Microvascular Dysfunction in Diabetic Mice Using Arterial Spin Labeling Cardiac MRI: A Multimodality Imaging Comparison}
 \begin{itemize}
     \item \sanf{ieeeblue0}{Role:} \textbf{Coauthor}. Maintained an arterial perfusion marker (ASL) sequence on a Biospec 94/30 scanner.
     \item \sanf{ieeeblue0}{Status:} Published at \url{https://doi.org/10.1002/jmri.70304} on \textit{J. Magn. Reson. Imaging}.
 \end{itemize}
 \vspace{\baselineskip}
-\subsection{[5] 2025, ASL-CMR detects CMD in diabetic mice: a multi-imaging modality comparison}\;\badge{ieeeblue1}{Pulse Sequence}
+\subsection{[5] 2025, ASL-CMR detects CMD in diabetic mice: a multi-imaging modality comparison}
 \begin{itemize}
     \item \sanf{ieeeblue0}{Role:} \textbf{Coauthor}. Maintained an arterial perfusion marker (ASL) sequence on a Biospec 94/30 scanner.
     \item \sanf{ieeeblue0}{Status:} Published at \url{https://archive.ismrm.org/2025/1028.html} on \textit{ISMRM}-2025.
 \end{itemize}
 
-\clearpage
+% \clearpage
 
 \section{Open-Source Projects}
 \subsection{MRArbGrad}\;\badge{ieeeblue1}{Pulse Sequence}
 \begin{itemize}
-    \item \sanf{ieeeblue0}{Intro.:} The fastest non-Cartesian gradient solver at present; \sanf{ieeeblue0}{Able to solve gradients in scan time;} Written in C++ backend with a Python wrapper; Compatible with all pulse sequence development platforms using C++ or Python; Includes a ready-to-use trajectory library; Manuscript Reference: [1].
+    \item \sanf{ieeeblue0}{Intro.:} The fastest non-Cartesian gradient solver at present; \sanf{ieeeblue0}{Real-time capability: gradients solve time is shorter than its duration;} Written in C++ backend with a Python wrapper; Compatible with all pulse sequence development platforms using C++ or Python; Includes a ready-to-use trajectory library; Manuscript Reference: [1].
     \item \sanf{ieeeblue0}{Link (PyPI): } \url{https://pypi.org/project/MRArbGrad}
     \item \sanf{ieeeblue0}{Link (GitHub): } \url{https://github.com/RyanShanghaitech/MRArbGrad}
     \item \sanf{ieeeblue0}{Role:} \textbf{Sole Developer}.
@@ -133,13 +133,13 @@
 \vspace{\baselineskip}
 \subsection{MRArbDcf}\;\badge{ieeeblue1}{Reconstruction}
 \begin{itemize}
-    \item \sanf{ieeeblue0}{Intro.:} The fastest density compensation function (DCF) solver at present; \sanf{ieeeblue0}{Able to solve DCF in 0.1 sec for 2D or 20 sec for 3D on CPU;} Supports both CPU and GPU platform. Manuscript Reference: [2].
+    \item \sanf{ieeeblue0}{Intro.:} The fastest density compensation function (DCF) solver at present; \sanf{ieeeblue0}{DCF solve time: 0.1 sec for 2D or 20 sec for 3D (CPU);} Supports both CPU and GPU platforms. Manuscript Reference: [2].
     \item \sanf{ieeeblue0}{Link (PyPI): } \url{https://pypi.org/project/MRArbDcf}
     \item \sanf{ieeeblue0}{Link (GitHub): } \url{https://github.com/RyanShanghaitech/MRArbDcf}
     \item \sanf{ieeeblue0}{Role:} \textbf{Sole Developer}.
 \end{itemize}
 \vspace{\baselineskip}
-\subsection{TorchFinufft-Ryan}\;\badge{ieeeblue1}{Reconstruction}
+\subsection{TorchFinufft-Ryan}\;\badge{ieeeblue1}{Optimization}
 \begin{itemize}
     \item \sanf{ieeeblue0}{Intro.:} NUFFT module for PyTorch and a Toeplitz MSE loss module; Useful in optimization-based or deep-learning-based reconstruction projects; \sanf{ieeeblue0}{In 256\textsuperscript{2} iterative reconstruction: 2 ms per step using NUFFT or 3 ms per step using Toeplitz on an RTX3090}.
     \item \sanf{ieeeblue0}{Link (PyPI): } \url{https://pypi.org/project/torchfinufft-ryan}
@@ -149,7 +149,7 @@
 \vspace{\baselineskip}
 \subsection{MRPhantom}\;\badge{ieeeblue1}{Simulation}
 \begin{itemize}
-    \item \sanf{ieeeblue0}{Intro.:} Volumetric dynamic MRI Phantom of a Slime with respiratory and cardiac motion, and M0, phase, T1, T2, B0 maps, and also coil sensitivity maps; Boosted by a parallel C-API Backend; \sanf{ieeeblue0}{Support memory-efficient mode: phantom are generated in real time according to motion parameter to avoid explicit 3D+T construction (137 ms per 256\textsuperscript{3} volume).}
+    \item \sanf{ieeeblue0}{Intro.:} Volumetric dynamic MRI Phantom of a Slime with respiratory and cardiac motion, and M0, phase, T1, T2, B0 maps, and also coil sensitivity maps; Boosted by a parallel C-API Backend; \sanf{ieeeblue0}{Support memory-efficient mode: phantoms are generated in real time according to motion parameter to avoid explicit 3D+T construction (137 ms per 256\textsuperscript{3} volume).}
     \item \sanf{ieeeblue0}{Link (PyPI): } \url{https://pypi.org/project/MRPhantom}
     \item \sanf{ieeeblue0}{Link (GitHub): } \url{https://github.com/RyanShanghaitech/MRPhantom}
     \item \sanf{ieeeblue0}{Role:} \textbf{Sole Developer}.
@@ -172,9 +172,9 @@
 \end{itemize}
 
 % \vspace{\baselineskip}
-\clearpage
+% \clearpage
 
-\subsection{Provincial 1st prize in Smart Car Competition, Optical Group, 2019}\;\badge{ieeeblue1}{Image Processing} \badge{ieeeblue1}{Embedded Programming}
+\subsection{Provincial 1st prize in Smart Car Competition, Optical Group, 2019}\;\badge{ieeeblue1}{Embedded Programming}
 \begin{itemize}
     \item \sanf{ieeeblue0}{Target:} Design a model car to trace the racing track using a digital camera.
     \item \sanf{ieeeblue0}{Selectivity:} 2 teams per category per school.
@@ -182,7 +182,7 @@
 \end{itemize}
 \sanf{ieeeblue0}{Other Awards:} Two additional national prizes and three university-level prizes for which I was invited to provide technical support.
 
-\section{Experiences}
+\section{Experience}
 \subsection{2025 September, Reviewer, \textit{IEEE Transactions on Medical Imaging}}
 \begin{itemize}
     \item \sanf{ieeeblue0}{Role:} \textbf{Reviewer}.

@@ -1,0 +1,179 @@
+\documentclass[a4paper,10pt]{ctexart}
+\hfuzz=10pt
+\hbadness=10000
+
+\usepackage{fontawesome5}
+\usepackage{academicons}
+\usepackage{graphicx}
+\usepackage{makecell}
+\usepackage{parskip}
+\usepackage{enumitem}
+\setlist[itemize]{label=\raisebox{0.2ex}{\footnotesize\(\triangleright\)}}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=1.0, hmargin=0.75in, vmargin=0.5in]{geometry}
+\usepackage{tabularx}
+\usepackage{supertabular}
+\usepackage{multicol}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{ieeeblue0}{RGB}{0,67,147}
+\definecolor{ieeeblue1}{RGB}{19,138,218}
+\hypersetup{
+  colorlinks,
+  breaklinks,
+  urlcolor=ieeeblue1,
+  linkcolor=ieeeblue1
+}
+
+\usepackage{tikz}
+\newcommand{\sanf}[2]{{\textsf{\textcolor{#1}{#2}}}}
+
+\usepackage{titlesec}
+\titleformat{\section}
+  {\sffamily\Large\color{ieeeblue0}}
+  {}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\baselineskip}{6pt}
+
+\titleformat{\subsection}
+  [runin]
+  {\sffamily\normalsize\color{ieeeblue0}}
+  {}{0em}{}[]
+\titlespacing{\subsection}{0ex}{0ex}{0ex}
+
+\newcommand{\badge}[2]{%
+  \tikz[baseline=(n.base)]%
+    \node (n) [%
+      draw=#1!40,
+      fill=#1!12,
+      text=#1!50!black,
+      rounded corners=4pt,
+      inner xsep=4pt,
+      inner ysep=0pt,
+      minimum height=\baselineskip,
+      text depth=0pt,
+      font=\sffamily\normalsize
+    ] {#2};%
+}
+
+% QR cmd
+\newlength{\QRsize}
+\setlength{\QRsize}{4cm}
+\newcommand{\qrimg}[2]{%
+  \href{#2}{\includegraphics[width=\QRsize,height=\QRsize]{#1}}%
+}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\newcommand{\icon}[1]{\raisebox{-0.25ex}{\includegraphics[height=1em]{#1}}}
+
+\begin{minipage}[t]{0.4\linewidth}
+  {\sffamily\bfseries\Huge\color{ieeeblue0}{罗瑞}}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.55\linewidth}
+  \raggedleft\sffamily
+  邮箱：\href{mailto:rui.1002@proton.me}{\textcolor{ieeeblue1}{rui.1002@proton.me}}\\
+  上海科技大学\\
+  \href{https://scholar.google.com/citations?user=llTqHTUAAAAJ&hl=en}{\textcolor{ieeeblue1}{\icon{../resource/scholar.png} Google Scholar}}
+  $\;|\;$\href{https://pypi.org/user/ryan_shanghaitech/}{\textcolor{ieeeblue1}{\icon{../resource/pypi.png} PyPI}}
+  $\;|\;$\href{https://github.com/RyanShanghaitech}{\textcolor{ieeeblue1}{\icon{../resource/github.png} GitHub}}
+\end{minipage}
+
+\vspace{1\baselineskip}
+
+\sanf{ieeeblue0}{\textbf{自我介绍：}}
+上海科技大学生物医学工程专业，硕士研究生，精通非笛卡尔序列设计与重建。在IEEE TBME、ISMRM、SCMR、AAAI、JMRI等国际著名期刊、会议发表过论文，并在PyPI、GitHub发布多个开源项目；受邀担任IEEE TMI、ISMRM审稿人。
+
+{\sanf{ieeeblue0}{\textbf{专业技能：}}}
+磁共振序列设计、磁共振图像重建、磁共振伪影校正、磁共振采样仿真、Python（包括Python C-API，支持CUDA加速）、MATLAB（包括MATLAB MEX）、C/C++、CUDA、Linux、电路设计、嵌入式开发、桌面开发（Qt）
+
+\section{教育背景}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2023 -- 2026 &
+\sanf{ieeeblue0}{上海科技大学，生物医学工程专业，硕士}
+\hfill \normalsize \makecell[r]{（专业GPA：3.92/4.00）\\（综合GPA：3.79/4.00）} \\
+&
+\sanf{ieeeblue0}{主要课程：} 算法设计与分析 \textbf{（A+）}、磁共振成像原理 \textbf{（A）}、医学图像处理 \textbf{（A）}、磁共振系统设计 \textbf{（A）}、半导体探测器与读出电子学 \textbf{（A）} \\
+\\
+2018 -- 2022 &
+\sanf{ieeeblue0}{山东大学，自动化专业，学士}
+\hfill \normalsize （综合GPA：81.31/100） \\
+&
+\sanf{ieeeblue0}{奖项：} 国家一等奖1次，国家二等奖1次，省一等奖1次。
+\end{tabularx}
+
+\section{项目经历（磁共振方向）}
+\textbf{*以下项目皆为一作或独作}
+\subsection{[1] 2026，Real-Time Gradient Waveform Design for Arbitrary k-Space Trajectories}\;\badge{ieeeblue1}{序列设计}
+\begin{itemize}
+    \item \sanf{ieeeblue0}{简介：}目前最快的通用梯度波形求解器（提升约10倍），可以在扫描过程中实时求解非笛卡尔梯度波形。应用于临床时，可完全避免梯度波形预计算，提高扫描效率；应用于项目开发时，可快速生成任意轨迹的梯度波形以便进行仿真测试；该技术未来有望应用于反馈式磁共振序列。
+    \item \sanf{ieeeblue0}{技术方案：}使用以C++底层、以Python为接口的技术方案；本项目提供完备的非笛卡尔轨迹库，包含多种常用非笛卡尔轨迹。
+    \item \sanf{ieeeblue0}{\icon{../resource/pypi.png}\;项目链接（PyPI）：}\url{https://pypi.org/project/MRArbGrad}
+    \item \sanf{ieeeblue0}{\icon{../resource/github.png}\;项目链接（GitHub）：}\url{https://github.com/RyanShanghaitech/MRArbGrad}
+    \item \sanf{ieeeblue0}{论文链接：}\url{https://doi.org/10.1109/TBME.2026.3654117}，已发表于 \textit{IEEE Transactions on Biomedical Engineering}，第一作者。
+\end{itemize}
+\vspace{\baselineskip}
+
+\subsection{[2] 2026，Sampling Density Compensation using Fast Fourier Deconvolution}\;\badge{ieeeblue1}{图像重建}
+\begin{itemize}
+    \item \sanf{ieeeblue0}{简介：}目前最快的密度补偿函数求解器（提升至少40倍）。应用于平扫时，可在扫描结束后立即求解密度补偿函数，以便进行重建。应用于压缩感知重建时，可作为Precondition，加速收敛，并大幅提高重建质量。
+    \item \sanf{ieeeblue0}{技术方案：}支持CPU和GPU两种模式，按需使用FINUFFT和CUFINUFFT作为后端。接口部分采用Python封装。
+    \item \sanf{ieeeblue0}{\icon{../resource/pypi.png}\;项目链接（PyPI）：}\url{https://pypi.org/project/MRArbDcf}
+    \item \sanf{ieeeblue0}{\icon{../resource/github.png}\;项目链接（GitHub）：}\url{https://github.com/RyanShanghaitech/MRArbDcf}
+    \item \sanf{ieeeblue0}{论文链接：}\url{https://doi.org/10.48550/arXiv.2510.14873}，已被 \textit{ISMRM 2026} 接收，第一作者。
+\end{itemize}
+\vspace{\baselineskip}
+
+\subsection{[3] 2026, TorchFinufft-ryan: FINUFFT and Toeplitz Module for PyTorch}\;\badge{ieeeblue1}{数值优化}
+\begin{itemize}
+    \item \sanf{ieeeblue0}{简介：}适用于PyTorch的NUFFT模块，使用FINUFFT实现前向运算与梯度回传，同时支持Toeplitz加速和Preconditioning.应用于凸优化或深度重建时，大幅提高重建速度（对比torchkbnufft提升约50倍）。
+    \item \sanf{ieeeblue0}{\icon{../resource/pypi.png}\;项目链接（PyPI）：}\url{https://pypi.org/project/torchfinufft-ryan}
+    \item \sanf{ieeeblue0}{\icon{../resource/github.png}\;项目链接（GitHub）：}\url{https://github.com/RyanShanghaitech/torchfinufft}
+\end{itemize}
+\vspace{\baselineskip}
+
+\subsection{[4] 2026, MRPhantom: Digital Phantom for Magnetic Resonance Imaging}\;\badge{ieeeblue1}{傅里叶仿真}
+\begin{itemize}
+    \item \sanf{ieeeblue0}{简介：}三位动态磁共振仿体，支持任意分辨率，可模拟心跳和呼吸运动，可仿真M0、phase、T1、T2、B0图，以及线圈敏感度图。
+    \item \sanf{ieeeblue0}{技术方案：}采用并行的Python C-API进行后端加速；支持内存优化模式：该模式下仿体将按需生成，以避免直接存储四维数组。测试条件下，每生成一个\(256^3\)仿体平均耗时137 ms。
+    \item \sanf{ieeeblue0}{\icon{../resource/pypi.png}\;项目链接（PyPI）：} \url{https://pypi.org/project/MRPhantom}
+    \item \sanf{ieeeblue0}{\icon{../resource/github.png}\;项目链接（GitHub）：} \url{https://github.com/RyanShanghaitech/MRPhantom}
+\end{itemize}
+\textbf{*另有三篇本人作为共同作者的学术论文，分别发表于AAAI、JMRI、ISMRM。}
+
+\section{项目经历（自动化方向）}
+\subsection{2020，智能汽车竞赛声音信标组}\;\badge{ieeeblue1}{信号处理}
+\begin{itemize}
+    \item \sanf{ieeeblue0}{简介：}设计赛车模型追踪声学目标。本人负责开发基于快速互相关的声学定位算法和基于边缘提取的光学定位算法。算法需在一枚双核英飞凌单片机上实现。
+    \item \sanf{ieeeblue0}{所获奖项：}国家一等奖：每校限1支队伍。该奖项为整支队伍提供保研名额。
+\end{itemize}
+\vspace{\baselineskip}
+
+\subsection{2021，智能车竞赛智慧物流组}\;\badge{ieeeblue1}{电路设计}
+\begin{itemize}
+    \item \sanf{ieeeblue0}{简介：}利用一辆装有激光雷达、小型显卡的模型车完成物流配送任务。本人负责电路设计与焊接、ROS调试、目标检测、PID电机控制，TCP上位机开发。
+    \item \sanf{ieeeblue0}{所获奖项：}国家二等奖：每校限1支队伍。该奖项为3名队员提供保研名额。
+\end{itemize}
+\vspace{\baselineskip}
+
+\subsection{2019，智能车竞赛光电组}\;\badge{ieeeblue1}{嵌入式开发}
+\begin{itemize}
+    \item \sanf{ieeeblue0}{目标：}设计赛车完成竞速比赛。本人负责基于大津法的图像分割算法，光学导航算法，PID电机控制，以及基于IIC、SPI、MIPI等协议的硬件驱动程序。
+    \item \sanf{ieeeblue0}{所获奖项：} 省级一等奖：每校限2支队伍。
+\end{itemize}
+\textbf{*另获两项国家级奖项与三项校级奖项，本人受邀提供技术支持。}
+
+\begin{center}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{ccc}
+\qrimg{../qr/scholar.png}{https://scholar.google.com/citations?user=llTqHTUAAAAJ\&hl=en} &
+\qrimg{../qr/pypi.png}{https://pypi.org/user/ryan_shanghaitech/} &
+\qrimg{../qr/github.png}{https://github.com/RyanShanghaitech}
+\end{tabular}
+\end{center}
+
+\end{document}
