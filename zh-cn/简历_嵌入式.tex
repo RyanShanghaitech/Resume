@@ -8,7 +8,7 @@
 \usepackage{makecell}
 \usepackage{parskip}
 \usepackage{enumitem}
-\setlist[itemize]{label=\raisebox{0.2ex}{\footnotesize\(\triangleright\)}, itemsep=0pt, parsep=0pt, topsep=2pt}
+\setlist[itemize]{label=\raisebox{0.2ex}{\footnotesize\(\triangleright\)}}
 
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[scale=1.0, hmargin=0.75in, vmargin=0.5in]{geometry}
@@ -34,7 +34,7 @@
 \titleformat{\section}
   {\sffamily\Large\color{ieeeblue0}}
   {}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{0.2\baselineskip}{0.2\baselineskip}
+\titlespacing{\section}{0pt}{0.5\baselineskip}{1\baselineskip}
 
 \titleformat{\subsection}
   [runin]
@@ -82,20 +82,19 @@
   上海科技大学
 \end{minipage}
 
-% \vspace{1\baselineskip}
+\vspace{1\baselineskip}
 
 \sanf{ieeeblue0}{\textbf{自我介绍：}}
 上海科技大学生物医学工程专业，硕士研究生，精通非笛卡尔序列设计与重建。在IEEE TBME、ISMRM、SCMR、AAAI、JMRI等国际著名期刊、会议发表过论文，并在PyPI、GitHub发布多个开源项目；受邀担任IEEE TMI、ISMRM审稿人。
 
-
 {\sanf{ieeeblue0}{\textbf{通用技能：}}}
 Python（包括C-API）、MATLAB（包括MEX）、C/C++、CUDA、Linux
 
-{\sanf{ieeeblue0}{\textbf{专业技能（磁共振）：}}}
-磁共振序列设计、磁共振图像重建、磁共振伪影校正、磁共振采样仿真
-
 {\sanf{ieeeblue0}{\textbf{专业技能（自动化）：}}}
 电路设计（AD）、电路仿真（Multisim）、嵌入式开发（STM32Cube）、桌面开发（Qt）
+
+{\sanf{ieeeblue0}{\textbf{专业技能（磁共振）：}}}
+磁共振序列设计、磁共振图像重建、磁共振伪影校正、磁共振采样仿真
 
 \section{教育背景}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
@@ -111,69 +110,62 @@ Python（包括C-API）、MATLAB（包括MEX）、C/C++、CUDA、Linux
 \sanf{ieeeblue0}{奖项：} 国家一等奖1次，国家二等奖1次，省一等奖1次。
 \end{tabularx}
 
-\section{项目经历（磁共振方向）}
-\textbf{*以下项目皆为一作或独作}
-\subsection{[1] 2026，Real-Time Gradient Waveform Design for Arbitrary k-Space Trajectories}\;\badge{ieeeblue1}{序列设计}
-\vspace{-0.5\baselineskip} % befitem
-\begin{itemize}
-    \item \sanf{ieeeblue0}{简介：}目前最快的通用梯度波形求解器（提升约10倍），可以在扫描过程中实时求解非笛卡尔梯度波形。应用于临床时，可完全避免梯度波形预计算，提高扫描效率；应用于项目开发时，可快速生成任意轨迹的梯度波形以便进行仿真测试；该技术未来有望应用于反馈式磁共振序列。
-    \item \sanf{ieeeblue0}{技术方案：}使用以C++底层、以Python为接口的技术方案；本项目提供完备的非笛卡尔轨迹库，包含多种常用非笛卡尔轨迹。
-    \item \sanf{ieeeblue0}{相关论文：}已发表于 \textit{IEEE Transactions on Biomedical Engineering}，第一作者。
-\end{itemize}
-\vspace{0.1\baselineskip} % aftitem
-
-\subsection{[2] 2026，Sampling Density Compensation using Fast Fourier Deconvolution}\;\badge{ieeeblue1}{图像重建}
-\vspace{-0.5\baselineskip} % befitem
-\begin{itemize}
-    \item \sanf{ieeeblue0}{简介：}目前最快的密度补偿函数求解器（提升至少40倍）。应用于平扫时，可在扫描结束后立即求解密度补偿函数，以便进行重建。应用于压缩感知重建时，可作为Precondition，加速收敛，并大幅提高重建质量。
-    \item \sanf{ieeeblue0}{技术方案：}支持CPU和GPU两种模式，按需使用FINUFFT和CUFINUFFT作为后端。接口部分采用Python封装。
-    \item \sanf{ieeeblue0}{相关论文：}已被 \textit{ISMRM 2026} 接收，第一作者。
-\end{itemize}
-\vspace{0.1\baselineskip} % aftitem
-
-\subsection{[3] 2026, TorchFinufft-ryan: FINUFFT and Toeplitz Module for PyTorch}\;\badge{ieeeblue1}{数值优化}
-\vspace{-0.5\baselineskip} % befitem
-\begin{itemize}
-    \item \sanf{ieeeblue0}{简介：}适用于PyTorch的NUFFT模块，支持Toeplitz加速和Preconditioning。应用于凸优化或深度重建时，大幅提高重建速度（对比torchkbnufft提升约50倍）。
-    \item \sanf{ieeeblue0}{技术方案：}使用FINUFFT实现前向运算与梯度回传，并将成对的傅里叶算子抽象为快速傅里叶卷积。
-\end{itemize}
-\vspace{0.1\baselineskip} % aftitem
-
-\subsection{[4] 2026, MRPhantom: Digital Phantom for Magnetic Resonance Imaging}\;\badge{ieeeblue1}{傅里叶仿真}
-\vspace{-0.5\baselineskip} % befitem
-\begin{itemize}
-    \item \sanf{ieeeblue0}{简介：}三维动态磁共振仿体，支持任意分辨率，可模拟心跳和呼吸运动，可仿真M0、phase、T1、T2、B0图，以及线圈敏感度图。
-    \item \sanf{ieeeblue0}{技术方案：}采用并行的Python C-API进行后端加速；支持内存优化模式：该模式下仿体将按需生成，以避免直接存储四维数组。测试条件下，每生成一个$256^3$仿体平均耗时137 ms。
-\end{itemize}
-\textbf{*另有三篇本人作为共同作者的学术论文，分别发表于AAAI、JMRI、ISMRM。}
-
 \section{项目经历（自动化方向）}
 \subsection{2020，智能汽车竞赛声音信标组}\;\badge{ieeeblue1}{信号处理}
-\vspace{-0.5\baselineskip} % befitem
 \begin{itemize}
     \item \sanf{ieeeblue0}{简介：}设计赛车模型追踪声学目标。
     \item \sanf{ieeeblue0}{技术方案：}使用快速互相关计算声学信号到达不同麦克风的延时，从而进行声学定位。光学定位算法基于Sobel算子。上述算法均使用C语言在一枚双核单片机上实现。此外，还需要使用C++开发基于Qt的上位机，并使用无线串口与车载单片机通信。
     \item \sanf{ieeeblue0}{所获奖项：}国家一等奖：每校限1支队伍。
 \end{itemize}
-\vspace{0.1\baselineskip} % aftitem
+\vspace{0.5\baselineskip}
 
 \subsection{2021，智能汽车竞赛智慧物流组}\;\badge{ieeeblue1}{电路设计}
-\vspace{-0.5\baselineskip} % befitem
 \begin{itemize}
     \item \sanf{ieeeblue0}{简介：}利用一辆装有激光雷达、Jetson开发板的模型车完成物流配送任务。
     \item \sanf{ieeeblue0}{技术方案：}1. 设计并焊接电路板（设计软件为Altium Designer）。2. 在开发板上搭建ROS系统用于进程间通信，并配置激光SLAM驱动程序。3. 编译支持显卡加速的OpenCV，并编写目标检测算法。4. 自行设计STM32开发板，并编写PID电机控制程序。5. 基于Qt开发TCP上位机，像模型车下发指令。
     \item \sanf{ieeeblue0}{所获奖项：}国家二等奖：每校限1支队伍。
 \end{itemize}
-\vspace{0.1\baselineskip} % aftitem
+\vspace{0.5\baselineskip}
 
 \subsection{2019，智能汽车竞赛光电组}\;\badge{ieeeblue1}{嵌入式开发}
-\vspace{-0.5\baselineskip} % befitem
 \begin{itemize}
     \item \sanf{ieeeblue0}{目标：}设计赛车模型在给定赛道上完成竞速比赛。
     \item \sanf{ieeeblue0}{技术方案：}使用C语言开发基于大津法的图像分割算法，用于进行光学导航。编写PID电机控制程序，使用I2C协议与激光测距模块通讯，使用MIPI协议与摄像头模块通讯，使用UART协议打印调试信息。
     \item \sanf{ieeeblue0}{所获奖项：} 省级一等奖：每校限2支队伍。
 \end{itemize}
 \textbf{*另获两项国家级奖项与三项校级奖项，本人受邀提供技术支持。}
+
+\section{项目经历（磁共振方向）}
+\textbf{*以下项目皆为一作或独作}
+\subsection{[1] 2026，Real-Time Gradient Waveform Design for Arbitrary k-Space Trajectories}\;\badge{ieeeblue1}{序列设计}
+\begin{itemize}
+    \item \sanf{ieeeblue0}{简介：}目前最快的通用梯度波形求解器（提升约10倍），可以在扫描过程中实时求解非笛卡尔梯度波形。应用于临床时，可完全避免梯度波形预计算，提高扫描效率；应用于项目开发时，可快速生成任意轨迹的梯度波形以便进行仿真测试；该技术未来有望应用于反馈式磁共振序列。
+    \item \sanf{ieeeblue0}{技术方案：}使用以C++底层、以Python为接口的技术方案；本项目提供完备的非笛卡尔轨迹库，包含多种常用非笛卡尔轨迹。
+    \item \sanf{ieeeblue0}{相关论文：}已发表于 \textit{IEEE Transactions on Biomedical Engineering}，第一作者。
+\end{itemize}
+\vspace{0.5\baselineskip}
+
+\subsection{[2] 2026，Sampling Density Compensation using Fast Fourier Deconvolution}\;\badge{ieeeblue1}{图像重建}
+\begin{itemize}
+    \item \sanf{ieeeblue0}{简介：}目前最快的密度补偿函数求解器（提升至少40倍）。应用于平扫时，可在扫描结束后立即求解密度补偿函数，以便进行重建。应用于压缩感知重建时，可作为Precondition，加速收敛，并大幅提高重建质量。
+    \item \sanf{ieeeblue0}{技术方案：}支持CPU和GPU两种模式，按需使用FINUFFT和CUFINUFFT作为后端。接口部分采用Python封装。
+    \item \sanf{ieeeblue0}{相关论文：}已被 \textit{ISMRM 2026} 接收，第一作者。
+\end{itemize}
+\vspace{0.5\baselineskip}
+
+\subsection{[3] 2026, TorchFinufft-ryan: FINUFFT and Toeplitz Module for PyTorch}\;\badge{ieeeblue1}{数值优化}
+\begin{itemize}
+    \item \sanf{ieeeblue0}{简介：}适用于PyTorch的NUFFT模块，支持Toeplitz加速和Preconditioning。应用于凸优化或深度重建时，大幅提高重建速度（对比torchkbnufft提升约50倍）。
+    \item \sanf{ieeeblue0}{技术方案：}使用FINUFFT实现前向运算与梯度回传，并将成对的傅里叶算子抽象为快速傅里叶卷积。
+\end{itemize}
+\vspace{0.5\baselineskip}
+
+\subsection{[4] 2026, MRPhantom: Digital Phantom for Magnetic Resonance Imaging}\;\badge{ieeeblue1}{傅里叶仿真}
+\begin{itemize}
+    \item \sanf{ieeeblue0}{简介：}三维动态磁共振仿体，支持任意分辨率，可模拟心跳和呼吸运动，可仿真M0、phase、T1、T2、B0图，以及线圈敏感度图。
+    \item \sanf{ieeeblue0}{技术方案：}采用并行的Python C-API进行后端加速；支持内存优化模式：该模式下仿体将按需生成，以避免直接存储四维数组。测试条件下，每生成一个$256^3$仿体平均耗时137 ms。
+\end{itemize}
+\textbf{*另有三篇本人作为共同作者的学术论文，分别发表于AAAI、JMRI、ISMRM。}
 
 \section{参考链接}
 \begin{center}

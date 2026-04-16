@@ -2,7 +2,7 @@
 
 import os
 import qrcode
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageOps
 
 tasks = [
     {
@@ -33,8 +33,8 @@ for item in tasks:
     # Create QR code (high error correction for center logo)
     qr = qrcode.QRCode(
         error_correction=qrcode.constants.ERROR_CORRECT_H,
-        box_size=10,
-        border=4
+        box_size=32,
+        border=2
     )
     qr.add_data(website_url)
     qr.make(fit=True)
@@ -43,9 +43,9 @@ for item in tasks:
     qr_w, qr_h = qr_img.size
 
     # Logo background (white rounded rectangle)
-    bg_size = qr_w // 6                  # background size relative to QR
-    radius = bg_size // 5                # rounded corner radius
-    padding = bg_size // 8               # inner padding for logo
+    bg_size = qr_w // 4
+    radius = bg_size // 5
+    padding = bg_size // 8
 
     badge = Image.new("RGBA", (bg_size, bg_size), (0, 0, 0, 0))
     draw = ImageDraw.Draw(badge)
@@ -55,14 +55,19 @@ for item in tasks:
         fill=(255, 255, 255, 255)
     )
 
-    # Open logo and fit into badge area (keep aspect ratio)
+    # ----- Resize logo to fit the rectangle's inner area -----
     logo = Image.open(logo_path).convert("RGBA")
-    max_logo_size = bg_size - 2 * padding
-    logo.thumbnail((max_logo_size, max_logo_size), Image.LANCZOS)
+    inner_w = bg_size - 2 * padding
+    inner_h = bg_size - 2 * padding
 
-    lx = (bg_size - logo.width) // 2
-    ly = (bg_size - logo.height) // 2
-    badge.paste(logo, (lx, ly), logo)
+    # Keeps aspect ratio; fits entirely inside (inner_w, inner_h)
+    logo_fit = ImageOps.contain(logo, (inner_w, inner_h), Image.LANCZOS)
+
+    # Center the resized logo in the inner area
+    lx = padding + (inner_w - logo_fit.width) // 2
+    ly = padding + (inner_h - logo_fit.height) // 2
+    badge.paste(logo_fit, (lx, ly), logo_fit)
+    # ---------------------------------------------------------
 
     # Paste badge at QR center
     x = (qr_w - bg_size) // 2

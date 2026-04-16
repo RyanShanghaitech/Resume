@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.1.31)  16 APR 2026 20:39
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2026.1.31)  16 APR 2026 20:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/ryan/LProject/Github/Resume/zh-cn/简历
-(/home/ryan/LProject/Github/Resume/zh-cn/简历.tex
+**/home/ryan/LProject/Github/Resume/zh-cn/简历_嵌入式
+(/home/ryan/LProject/Github/Resume/zh-cn/简历_嵌入式.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexart.cls (/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2021/12/12 v2.5.8 Backend configuration file (CTEX)
@@ -696,8 +696,8 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \titlewidthfirst=\dimen326
 )
 \QRsize=\skip69
- (./简历.aux)
-\openout1 = `简历.aux'.
+ (./简历_嵌入式.aux)
+\openout1 = `简历_嵌入式.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
@@ -824,9 +824,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 67.
 LaTeX Info: Redefining \pageref on input line 67.
 LaTeX Info: Redefining \nameref on input line 67.
- (./简历.out) (./简历.out)
+ (./简历_嵌入式.out) (./简历_嵌入式.out)
 \@outlinefile=\write4
-\openout4 = `简历.out'.
+\openout4 = `简历_嵌入式.out'.
 
 
 
@@ -849,9 +849,9 @@ Package fontspec Info: Font family 'FandolHei-Regular(0)' created for font
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 119.
+(Font)              <8> on input line 116.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 119.
+(Font)              <6> on input line 116.
 [1
 
 ]
@@ -861,17 +861,17 @@ File: ../qr/pypi.png Graphic file (type bmp)
 <../qr/pypi.png>
 File: ../qr/github.png Graphic file (type bmp)
 <../qr/github.png>
- [2] (./简历.aux)
-Package rerunfilecheck Info: File `简历.out' has not changed.
-(rerunfilecheck)             Checksum: BE2512913F8289D6A314055D6914A27D;2664.
+ [2] (./简历_嵌入式.aux)
+Package rerunfilecheck Info: File `简历_嵌入式.out' has not changed.
+(rerunfilecheck)             Checksum: 0BA1E26C7B9C092B9A3BCD8746245217;2664.
  ) 
 Here is how much of TeX's memory you used:
  28677 strings out of 476191
- 615051 string characters out of 5812072
- 958426 words of memory out of 5000000
+ 615119 string characters out of 5812072
+ 949456 words of memory out of 5000000
  48948 multiletter control sequences out of 15000+600000
  473316 words of font info for 66 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,15n,97p,1227b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 89i,15n,97p,1231b,672s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 简历.pdf (2 pages).
+Output written on 简历_嵌入式.pdf (2 pages).
