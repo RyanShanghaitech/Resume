@@ -53,6 +53,13 @@
     ] {#2};%
 }
 
+% QR cmd
+\newlength{\QRsize}
+\setlength{\QRsize}{4cm}
+\newcommand{\qrimg}[2]{%
+  \href{#2}{\includegraphics[width=\QRsize,height=\QRsize]{#1}}%
+}
+
 \begin{document}
 
 \pagestyle{empty} 
@@ -200,5 +207,15 @@
     \item \sanf{ieeeblue0}{Role:} \textbf{Teaching Assistant}.
     \item \sanf{ieeeblue0}{Highlights:} Mentored 33 students; designed the final project involving sampling and reconstruction simulation; delivered a review lecture highly rated by students.
 \end{itemize}
+
+\section{Reference}
+\begin{center}
+\setlength{\tabcolsep}{10pt}
+\begin{tabular}{ccc}
+\qrimg{../qr/scholar.png}{https://scholar.google.com/citations?user=llTqHTUAAAAJ\&hl=en} &
+\qrimg{../qr/pypi.png}{https://pypi.org/user/ryan_shanghaitech/} &
+\qrimg{../qr/github.png}{https://github.com/RyanShanghaitech}
+\end{tabular}
+\end{center}
 
 \end{document}
